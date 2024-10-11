@@ -1,10 +1,10 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import DOMpurify from "dompurify";
 import QuizeIntro from "./QuizeIntro";
 import QuizeUI from "./QuizeUI";
 import QuizicalScore from "./QuizicalScore.jsx";
 import "./Quize-App.css";
-import data from "./QuizicalData.js";
+// import data from "./QuizicalData.js";
 import LeaderBoard from "./LeaderBoard.jsx";
 import Review from "./Review.jsx";
 import Cv from "./GenPdf.jsx";
@@ -36,21 +36,29 @@ function Quizzical() {
   const [userSelectedOption, setUserSelectedOption] = useState("")
   const [showleaderboard, setShowleaderBoard] = useState(false);
   const [storedQuestion, setStoredQuestion] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
 
-  useMemo(() => {
-    const fetchData = () => {
+  useEffect(() => {
+    const fetchData = async () => {
       try {
-        const res = data;
-        setQuizData(res.results);
-        setCurrentQuestion(res.results[0]);
+        setIsLoading(true)
+        const res = await fetch("https://opentdb.com/api.php?amount=50&category=18&difficulty=medium&type=multiple")
+        if(!res.ok){
+          throw new Error(`An error occured ${res.statusText}`)
+        }
+        const data = await res.json();
+        console.log(data)
+        setQuizData(data.results);
+        setCurrentQuestion(data.results[0]);
         setShuffedOption(
           shuffuledOptions([
-            ...res.results[0].incorrect_answers,
-            res.results[0].correct_answer,
+            ...data.results[0].incorrect_answers,
+            data.results[0].correct_answer,
           ])
         );
         setUsedQuestion(new Set([0]));
         setQuestionHistory([0]);
+        setIsLoading(false)
       } catch (e) {
         console.log(e);
       } finally {
@@ -186,21 +194,19 @@ function Quizzical() {
     setIsOPtionSelected(false);
     setCurrentQuestionIndex(questionHistory.length);
     setProgress(usedQuestion.size);
+
+   
   }
 
   function handleOptionSelected(option) {
     setUserSelectedOption(option)
     setOnceSelectedOption(option);
-      
-    console.log(userSelectedOption)
-    console.log(onceSelectedOption)
      setSelectedOption(option);
       storedAnsweredQuestion(option);
       setIsOPtionSelected(true);
 
       setAnsweredQuestions(answeredQuestions + 1);
-   
-   
+      // setSelectedAnswers(prev => ({...prev,[currentQuestionIndex]: option,}))
     if (option === currentQuestion.correct_answer) {
       setCorrectAnser(correctAnswer + 1);
       setTotalScore(totalScore + 1);
@@ -442,6 +448,7 @@ function Quizzical() {
           sanitizedProps={sanitizedProps}
           onceSelectedOption = {onceSelectedOption}
           userSelectedOption = {userSelectedOption}
+          isLoading = {isLoading}
           
           
         />

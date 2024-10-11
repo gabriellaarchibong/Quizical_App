@@ -1,9 +1,28 @@
 
 
 import "./QuizeUi.css";
-import propTypes from "prop-types"
-
+import propTypes from "prop-types";
 function QuizeUI(props) {
+
+   // useEffect(()=> {
+  //   const savedProgress = localStorage.getItem("QuizProgress");
+  //   if(savedProgress){
+  //     const {currentQuizQuestion, SelectedOption, score} = JSON.parse(savedProgress);
+  //     setSavedQuestionIndex(currentQuizQuestion);
+  //     setSavedSelectedAnswers(selectedOption);
+  //     setQuizTotalScore(score);
+
+  //   }
+  // }, []);
+
+   // useEffect(() => {
+  //   const quizProgress = {
+  //     currentQuestionIndex,
+  //     userSelectedOption,
+  //     totalScore,
+  //   }
+  //   localStorage.setItem("QuizProgress", JSON.stringify(quizProgress))
+  // }, [currentQuestionIndex,userSelectedOption,totalScore])
 
   const styles = (option) => {
     if (!props.isOptionSelected) {
@@ -47,12 +66,15 @@ function QuizeUI(props) {
             </div>
           </div>
           <div className="question">
+            {props.isLoading ?
+             <div className="Question-box">Loading...</div> 
+             :
             <div
               className="question-box"
               dangerouslySetInnerHTML={props.sanitizedProps(
                 props.currentQuestion?.question
               )}
-            />
+            />}
           </div>
         </div>
         <div className="middle">
@@ -115,6 +137,7 @@ QuizeUI.propTypes = {
   handleNextQuestion: propTypes.any,
   handlePrevQuestion: propTypes.any,
   quizData:propTypes.any,
+  isLoading: propTypes.any,
 
 }
 
