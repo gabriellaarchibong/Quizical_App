@@ -1,0 +1,479 @@
+.quize-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #a42fc1;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+}
+.img-bg {
+  align-self: center;
+  height: 10%;
+  text-align: center;
+  border-radius: 5px;
+}
+.quiz-img{
+  background-color: white;
+}
+
+.btn {
+  background-color: green;
+  width: 100%;
+  height: 7vh;
+  border: 1px solid white;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "poppins" sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  background-color: rgb(4, 49, 4);
+}
+.intro--form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.intro-form {
+  background-color: #d39fe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100%;
+  height: 22vh;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 5rem;
+}
+.input-name {
+  background-color: #e8e5e9;
+  width: 90%;
+  height: 5vh;
+  margin: 10px;
+  color: #a42fc1;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+.custom-select {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.select-gender {
+  background-color: #e8e5e9;
+  width: 90%;
+  height: 5vh;
+  color: #a42fc1;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.name-label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.option-text {
+  font-size: 1.5rem;
+  color: black;
+}
+.option-text[value] {
+  font-size: 2rem;
+  color: black;
+}
+.btn-2 {
+  background-color: green;
+  margin-top: 5rem;
+  width: 100%;
+  height: 7vh;
+  border: 1px solid white;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "poppins" sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+.intro-msg {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.avater-image {
+  width: 10rem;
+}
+.avater {
+  display: flex;
+  justify-content: center;
+}
+.welcome-info {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  background-color: #d39fe0;
+  align-items: center;
+  width: 50%;
+  min-width: 100%;
+  height: 30vh;
+  border-radius: 20px;
+  padding: 10px;
+  color: #a42fc1;
+}
+.avater-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.gender {
+  font-size: 1.5rem;
+  line-height: 0.2;
+}
+
+@media only screen and (max-width: 950px) {
+    .option-text[value] {
+        font-size: 1.5rem;
+        color: #a42fc1;
+      }
+}
+
+@media only screen and (max-width: 950px) and (orientation: landscape) {
+  .img-bg {
+    height: 11%;
+    
+  }
+  .btn-2 {
+    margin-top: 3rem; 
+  }
+  .welcome-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
+  
+}
+
+@media (10rem <= width <= 50rem) {
+  .quize-container {
+    /* background-color: red; */
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .intro-form {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .input-name {
+    background-color: #e8e5e9;
+    color: #a42fc1;
+    /* font-size: 1.5rem; */
+    border-radius: 10px;
+  }
+  .name-label{
+    font-size: 1.2rem;
+  }
+  .select-gender {
+    background-color: #e8e5e9;
+    color: #a42fc1;
+    border-radius: 10px;
+  }
+  .option-text {
+    font-size: 1rem;
+  }
+  .name-label {
+    font-weight: bold;
+  }
+  .option-text[value] {
+    font-size: 0.5rem;
+    color: #a42fc1;
+    /* width: 10%; */
+  }
+  .welcome-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d39fe0;
+    align-items: center;
+    min-width: 60%;
+    padding: 15px;
+    /* background-color: red; */
+    
+    /* max-width: 50%; */
+    border-radius: 20px;
+    color: #a42fc1;
+  }
+  .avater-image {
+    width: 7rem;
+  }
+  .avater-info {
+    width: 90%;
+    font-size: 1rem;
+    /* background-color: blue; */
+  }
+  .gender {
+    font-size: 1rem;
+    line-height: 0.2;
+  }
+  .intro-msg {
+    min-width: 100%;
+    margin-top: 2rem;
+  }
+  .avater-name {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 300px) {
+  .quize-container {
+    background-color: #a42fc1;
+    min-width: 100%;
+    height: 100vh;
+    padding: 5px;
+  }
+  .bg-img {
+    width: 8rem;
+  }
+  .img-bg {
+    height: 4rem;
+  }
+  .quiz-img {
+    width: 4rem;
+  }
+  .intro-form {
+    background-color: #d39fe0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+    height: 22vh;
+    border-radius: 20px;
+    margin-top: 3rem;
+  }
+  .input-name {
+    background-color: #e8e5e9;
+    /* width: 90%; */
+    height: 5vh;
+    /* margin: 10px; */
+    color: #a42fc1;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+  .select-gender {
+    background-color: #e8e5e9;
+    /* width: 90%; */
+    /* height: 5vh; */
+    color: #a42fc1;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .name-label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .option-text[value] {
+    font-size: 0.7rem;
+    color: #a42fc1;
+  }
+  .btn {
+    background-color: green;
+    width: 100%;
+    height: 7vh;
+    border: 1px solid white;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "poppins" sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  .avater-image {
+    width: 7rem;
+  }
+  .welcome-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d39fe0;
+    align-items: center;
+    min-width: 90%;
+    border-radius: 20px;
+    color: #a42fc1;
+  }
+  .avater-info {
+    width: 100%;
+  }
+  .gender {
+    font-size: 1rem;
+    line-height: 0.2;
+  }
+  .intro-msg {
+    min-width: 100%;
+    margin-top: 2rem;
+  }
+  .avater-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+@media(max-width: 160px) {
+  .quize-container {
+    background-color: #a42fc1;
+    min-width: 100%;
+    height: 100vh;
+    padding: 5px;
+  }
+  .intro-form {
+    height: 29vh;
+    width: 50%;
+  }
+  .input-name{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-height: 300px) and (orientation: landscape){
+  .quize-container {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+  }
+  .bg-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    /* display: none; */
+  }
+  
+  .quiz-img {
+    margin-top: 1rem;
+    width: 3rem;
+  }
+  .intro-form {
+    width: 50%;
+    height: 80vh;
+    border-radius: 20px;
+   
+  }
+  .input-name, .select-gender {
+    width: 90%;
+    height: 20vh;
+    font-size: 1.2rem;
+  }
+  .name-label, .option-text, .option-text[value] {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .btn-2, .btn{
+    background-color: green;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 10rem;
+    height: 20vh;
+    font-size: 1.2rem;
+    
+  }
+  .welcome-info {
+    flex-direction: column;
+    min-width: 70%;
+    height: 100vh;
+    border-radius: 20px;
+    padding: 15px;
+    color: #a42fc1;
+  }
+  .avater-info {
+    width: 100%;
+    /* background-color: red; */
+  }
+  .gender {
+    font-size: 1rem;
+    line-height: 0.2;
+  }
+  .intro-msg {
+    min-width: 100%;
+    margin-top: 2rem;
+  }
+  .avater-name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .avater-image {
+    width: 6rem;
+  }
+  
+  
+
+}
+@media screen and (max-height: 500px) and (orientation: landscape){
+  .quize-container {
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+  }
+  .bg-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    /* display: none; */
+  }
+  .quiz-img {
+    margin-top: 1rem;
+    width: 5rem;
+  }
+  .intro-form {
+    width: 50%;
+    height: 80vh;
+    border-radius: 20px;
+   
+  }
+  .input-name, .select-gender {
+    width: 90%;
+    height: 15vh;
+    font-size: 1.2rem;
+  }
+  .name-label, .option-text, .option-text[value] {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .btn-2, .btn{
+    background-color: green;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 10rem;
+    height: 20vh;
+    font-size: 1.7rem;
+    
+  }
+  .welcome-info {
+    flex-direction: column;
+    min-width: 70%;
+    height: 90vh;
+    border-radius: 20px;
+    padding: 15px;
+    color: #a42fc1;
+  }
+  .avater-info {
+    width: 100%;
+    /* background-color: red; */
+  }
+}

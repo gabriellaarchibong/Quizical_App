@@ -1,0 +1,120 @@
+.certificate{
+    background-color: #f4f4f4;
+}
+.certificate-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+    border: 10px solid #A42FC1;
+    background-color: black;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .pdf-img{
+    width: 150px;
+  }
+  .complete{
+    width: 100px;
+
+  }
+  .pdf-btns{
+    display: flex;
+    justify-content: space-between;
+  }
+  .pdf-img--container{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  } 
+  .cv-header {
+    color: #F9C700;
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+  
+  .cv-header2 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  .cv-text {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .print {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .print:hover {
+    background-color: #45a049;
+  }
+  
+  /* CSS for print */
+  @media print {
+    .certificate, .certificate * {
+      visibility: visible;
+    }
+    .certificate {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    .certificate-container{
+        /* background-color: red; */
+        color: black;
+        font-size: 1.5rem;
+    }
+    .cv-header {
+      color: #A42FC1;
+      font-size: 48px;
+      margin-bottom: 0;
+    }
+    .pdf-img--container{
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 5%;
+    }
+    .cv-text {
+      font-size: 20px;
+      margin: 5px 0;
+    } 
+  }
+
+  @page {
+    size: A4 portrait; 
+    margin: 2cm; 
+}
+@media screen and (max-width: 300px){
+  .certificate-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .cv-header {
+    font-size: 2rem;
+  }
+  .pdf-img--container{
+    display: none;
+  }  
+}
+@media (10rem <= width <= 50rem){
+  .certificate-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .pdf-img--container{
+    display: none;
+  }  
+}
