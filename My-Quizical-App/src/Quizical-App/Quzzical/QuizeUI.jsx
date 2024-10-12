@@ -28,7 +28,7 @@ function QuizeUI(props) {
     if (!props.isOptionSelected) {
       return {};
     }
-    if (option === props.userSelectedOption && option === props.currentQuestion.correct_answer) {
+    if (option === props.currentQuestion.correct_answer) {
       return { backgroundColor: "#3aa832", color: "white" };
     }
     if (option === props.userSelectedOption && option !== props.currentQuestion.correct_answer) {
@@ -77,18 +77,20 @@ function QuizeUI(props) {
             />}
           </div>
         </div>
-        <div className="middle">
-          <div className="middle-text">
-            <p>{Math.round(props.totalProgress)}%</p>
-          </div>
+        <div className=" middle-box">
+            <div className="middle">
+              <div className="middle-text">
+                <p>{Math.round(props.totalProgress)}%</p>
+              </div>
 
-          <label htmlFor="progress--bar"></label>
-          <progress
-            value={props.totalProgress}
-            max={100}
-            id="progress-bar"
-            className="progress--bar"
-          ></progress>
+              <label htmlFor="progress--bar"></label>
+              <progress
+                value={props.totalProgress}
+                max={100}
+                id="progress-bar"
+                className="progress--bar"
+              ></progress>
+            </div>
         </div>
 
       </div>

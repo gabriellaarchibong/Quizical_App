@@ -1,16 +1,18 @@
 import "./Quizzical.css";
 import female from "/src/assets/Quizical-img/female.svg"
-import maleAvater from "/src/assets/Quizical-img/male_avater.svg"
+import maleAvater from "/src/assets/Quizical-img/male_avater.svg";
+import homeImage from "/src/assets/Quizical-img/quiz 1.png"
+import homeImage2 from "/src/assets/Quizical-img/completed 1.png"
 import propTypes from "prop-types"
 
 function QuizeIntro(props) {
   return (
     <div className="quize-container">
       <div className="img-bg">
-        <img className="quiz-img" src="/src/assets/Quizical-img/quiz 1.png" alt="Quiz-img" />
+        <img className="quiz-img" src= {homeImage} alt="Quiz-img" />
       </div>
       <img
-        src="/src/assets/Quizical-img/completed 1.png"
+        src= {homeImage2}
         alt="Quize-img"
         className="bg-img"
       />

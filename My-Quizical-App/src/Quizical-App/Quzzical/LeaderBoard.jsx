@@ -3,6 +3,7 @@ import "./LeaderBoard.css";
 import profile from "/src/assets/Quizical-img/female.svg";
 // import maleProfile from "/src/assets/Quizical/male_avater.svg";
 import maleProfile from "/src/assets/Quizical-img/female.svg"
+import arrowImage from "/src/assets/Quizical-img/back-arrow.png"
 import propTypes from "prop-types"
 function LeaderBoard(props) {
  const [leaderBoard, setLeaderBoard] = useState([]);
@@ -19,7 +20,7 @@ function LeaderBoard(props) {
           <button className="back--btn" onClick={props.handlebackButton}>
             <img
               className="arrow-img"
-              src="/src/assets/Quizical-img/back-arrow.png"
+              src= {arrowImage}
               alt="back-arrow"
             />
           </button>

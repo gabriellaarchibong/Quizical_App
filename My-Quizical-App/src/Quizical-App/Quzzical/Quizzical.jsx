@@ -233,7 +233,7 @@ function Quizzical() {
   }
 
   function handleEndGame() {
-    if (usedQuestion.size === quizData.length - 1 && !isOptionSelected) {
+    if (usedQuestion.size === quizData.length && !isOptionSelected) {
       setIsQuizeComplete(true);
       handleGameCompletion((totalScore / quizData.length) * 100);
     }

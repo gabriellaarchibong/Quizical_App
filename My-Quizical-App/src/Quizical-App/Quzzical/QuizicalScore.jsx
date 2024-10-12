@@ -1,6 +1,12 @@
 import "./QuizicalScore.css";
 // import jsPDF from 'jspdf';
 import propTypes from "prop-types";
+import replayImage from "/src/assets/Quizical-img/Vector.png";
+import reviewImg from "/src/assets/Quizical-img/eye.png";
+import shareIcon from "/src/assets/Quizical-img/share-icon.png";
+import pdfIcon from "/src/assets/Quizical-img/pdf.png";
+import homeIcon from "/src/assets/Quizical-img/home.png";
+import leaderboardIcon from "/src/assets/Quizical-img/cog.png"
 function QuizicalScore(props) {
   
   return (
@@ -50,7 +56,7 @@ function QuizicalScore(props) {
             <button className="social-btn replay" onClick={props.handleReplay}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/Vector.png"
+                src= {replayImage}
                 alt="play again logo"
               />
             </button>
@@ -60,7 +66,7 @@ function QuizicalScore(props) {
             <button className="social-btn review" onClick={props.handleReviewMode}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/eye.png"
+                src={reviewImg}
                 alt="eye image"
               />
             </button>
@@ -70,7 +76,7 @@ function QuizicalScore(props) {
             <button className="social-btn share" onClick={props.handleShare}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/share-icon.png"
+                src= {shareIcon}
                 alt="share-icon"
               />
             </button>
@@ -80,7 +86,7 @@ function QuizicalScore(props) {
             <button className="social-btn pdf" onClick={props.generatePdf}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/pdf.png"
+                src= {pdfIcon}
                 alt="pdf-icon"
               />
             </button>
@@ -90,7 +96,7 @@ function QuizicalScore(props) {
             <button className="social-btn home" onClick={props.homePage}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/home.png"
+                src= {homeIcon}
                 alt="home-icon"
               />
             </button>
@@ -100,7 +106,7 @@ function QuizicalScore(props) {
             <button className="social-btn board1" onClick={props.handleLeaderBoard}>
               <img
                 className="eye-image"
-                src="/src/assets/Quizical-img/cog.png"
+                src= {leaderboardIcon}
                 alt="cog-icon"
               />
             </button>

@@ -1,5 +1,6 @@
 import "./Review.css";
 import propTypes from "prop-types"
+import backBtnArrowImg from "/src/assets/Quizical-img/back-arrow.png"
 function Review(props) {
     
   return (
@@ -7,7 +8,7 @@ function Review(props) {
       <button className="back--btn2" onClick={props.handlebackButton}>
             <img
               className="arrow-img2"
-              src="/src/assets/Quizical-img/back-arrow.png"
+              src= {backBtnArrowImg}
               alt="back-arrow"
             />
           </button>
@@ -28,14 +29,14 @@ function Review(props) {
               <td data-title = "Your Answer" dangerouslySetInnerHTML={props.sanitizedProps(item.option)}></td>
               <td data-title = "Status">
                 {item.isCorrect ? (
-                  <span style={{ backgroundColor: "green" }}>Correct</span>
+                  <span style={{ backgroundColor: "green", color: "white", padding: "8px", fontWeight: "bold" }}>Correct</span>
                 ) : (
                   <>
                     {" "}
-                    <span style={{ backgroundColor: "red" }}>
+                    <span style={{ backgroundColor: "red", color: "white", padding: "8px", fontWeight: "bold" }}>
                       incorrect
                     </span>{" "}
-                    <br /> <span>correct Answer: {item.correctAnswer}</span>{" "}
+                    <br /> <span>correct Answer: <span  style={{padding: "8px", fontWeight: "bold", margin: "5px"}}>{item.correctAnswer}</span> </span>{" "}
                   </>
                 )}
               </td>
