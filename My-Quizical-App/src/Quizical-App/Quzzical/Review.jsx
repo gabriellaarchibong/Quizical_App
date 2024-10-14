@@ -29,14 +29,14 @@ function Review(props) {
               <td data-title = "Your Answer" dangerouslySetInnerHTML={props.sanitizedProps(item.option)}></td>
               <td data-title = "Status">
                 {item.isCorrect ? (
-                  <span style={{ backgroundColor: "green", color: "white", padding: "8px", fontWeight: "bold" }}>Correct</span>
+                  <span style={{ backgroundColor: "green", color: "white", padding: "3px", fontWeight: "bold" }}>Correct</span>
                 ) : (
                   <>
                     {" "}
-                    <span style={{ backgroundColor: "red", color: "white", padding: "8px", fontWeight: "bold" }}>
+                    <span style={{ backgroundColor: "red", color: "white", padding: "3px", fontWeight: "bold" }}>
                       incorrect
                     </span>{" "}
-                    <br /> <span>correct Answer: <span  style={{padding: "8px", fontWeight: "bold", margin: "5px"}}>{item.correctAnswer}</span> </span>{" "}
+                    <br /> <span>correct Answer: <span  style={{padding: "5px", fontWeight: "bold", margin: "5px"}}>{item.correctAnswer}</span> </span>{" "}
                   </>
                 )}
               </td>

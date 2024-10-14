@@ -72,7 +72,7 @@ function LeaderBoard(props) {
                     <th>profile</th>
                     <th>name</th>
                     <th>score</th>
-                    <th>Time</th>
+                    <th>Time Taken</th>
                     <th>Date</th>
                 </tr>
             </thead>
@@ -83,7 +83,7 @@ function LeaderBoard(props) {
                 <td data-title = "profile">{entry.userGender === "male" ?<img className="profile--img_tag" src= {maleProfile} alt="male_avater"/> : <img className="profile--img_tag" src= {profile} alt="female_avater" />}</td>
                 <td data-title = "name">{entry.userName.toUpperCase()}</td>
                 <td data-title = "score">{Math.floor(entry.score)}%</td>
-                <td data-title = "Time" style={{color: "green", fontWeight: "bold"}}>{entry.timeTaken}</td>
+                <td data-title = "Time Taken" style={{color: "green", fontWeight: "bold"}}>{entry.timeTaken}</td>
                 <td data-title = "Date">{entry.formatedTime}</td>
               </tr> 
             ))}

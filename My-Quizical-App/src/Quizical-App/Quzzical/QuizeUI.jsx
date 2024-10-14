@@ -41,43 +41,7 @@ function QuizeUI(props) {
 
   return (
     <div className="UI-container">
-      <div className="top">
-        <div className="center">
-          <div className="reading">
-            <div className="success">
-              <label htmlFor="success" className="progress-text">
-                {Math.round(props.correctProgress)}%
-              </label>
-              <progress
-                className="rate--progress-bar_success"
-                id="success"
-                value={props.correctProgress}
-                max={100}
-              ></progress>
-            </div>
-            <div className="failed">
-              <label htmlFor="failed" className="progress-text">{Math.round(props.wrongProgress)}%</label>
-              <progress
-                className="rate--progress-bar_failed"
-                id="failed"
-                value={props.wrongProgress}
-                max={100}
-              ></progress>
-            </div>
-          </div>
-          <div className="question">
-            {props.isLoading ?
-             <div className="Question-box">Loading...</div> 
-             :
-            <div
-              className="question-box"
-              dangerouslySetInnerHTML={props.sanitizedProps(
-                props.currentQuestion?.question
-              )}
-            />}
-          </div>
-        </div>
-        <div className=" middle-box">
+      <div className=" circle-box">
             <div className="middle">
               <div className="middle-text">
                 <p>{Math.round(props.totalProgress)}%</p>
@@ -92,6 +56,45 @@ function QuizeUI(props) {
               ></progress>
             </div>
         </div>
+      <div className="top">
+        <div className="center-box">
+            <div className="center">
+              <div className="reading">
+                <div className="success">
+                  <label htmlFor="success" className="progress-text">
+                    {Math.round(props.correctProgress)}%
+                  </label>
+                  <progress
+                    className="rate--progress-bar_success"
+                    id="success"
+                    value={props.correctProgress}
+                    max={100}
+                  ></progress>
+                </div>
+                <div className="failed">
+                  <label htmlFor="failed" className="progress-text">{Math.round(props.wrongProgress)}%</label>
+                  <progress
+                    className="rate--progress-bar_failed"
+                    id="failed"
+                    value={props.wrongProgress}
+                    max={100}
+                  ></progress>
+                </div>
+              </div>
+              <div className="question">
+                {props.isLoading ?
+                <div className="Question-box">Loading...</div> 
+                :
+                <div
+                  className="question-box"
+                  dangerouslySetInnerHTML={props.sanitizedProps(
+                    props.currentQuestion?.question
+                  )}
+                />}
+              </div>
+            </div>
+        </div>
+        
 
       </div>
 

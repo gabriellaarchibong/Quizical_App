@@ -170,25 +170,25 @@
 @media (10rem <= width <= 50rem) {
   .quize-container {
     /* background-color: red; */
-    min-width: 100%;
-    min-height: 100%;
+    /* min-width: 100%; */
+    /* min-height: 100%; */
   }
   .bg-img {
-    width: 10rem;
+    width: clamp(200px, 50vw, 600px);
   }
   .quiz-img {
-    width: 6rem;
-    margin-top: -3rem;
+    width: clamp(100px, 50vw, 100px);
+    /* margin-top: -3rem; */
   }
   .intro-form {
     margin-top: 1rem;
-    width: 70%;
+    width: clamp(80%, 50vw, 100%);
     font-size: 1rem;
   }
   .btn, .btn-2 {
     margin-top: 2rem;
     font-size: 1.3rem;
-    width: 100%;
+    width: clamp(50%, 50vw, 100%);;
   }
   .input-name {
     background-color: #e8e5e9;
@@ -223,11 +223,7 @@
     justify-content: center;
     background-color: #d39fe0;
     align-items: center;
-    min-width: 60%;
-    padding: 15px;
-    /* background-color: red; */
-    
-    /* max-width: 50%; */
+    min-width: 70%;
     border-radius: 20px;
     color: #a42fc1;
   }
@@ -437,7 +433,7 @@
   
 
 }
-@media screen and (max-height: 500px) and (orientation: landscape){
+@media screen and (max-height: 500px), (max-height: 799px) and (orientation: landscape){
   .quize-container {
     display: block;
     width: 100vw;
@@ -448,22 +444,22 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    width: clamp(200px, 50vw, 600px);;
     /* display: none; */
   }
   .quiz-img {
     margin-top: 1rem;
-    width: 5rem;
+    width: clamp(100px, 50vw, 100px);
   }
   .intro-form {
-    width: 50%;
-    height: 80vh;
+    width: clamp(50%, 50vw, 100%);
+    height: clamp(30%, 50vw, 60%);
     border-radius: 20px;
    
   }
   .input-name, .select-gender {
     width: 90%;
-    height: 15vh;
+    height: clamp(30px, 50vw, 50px);
     font-size: 1.2rem;
   }
   .name-label, .option-text, .option-text[value] {
@@ -474,21 +470,20 @@
     background-color: green;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 10rem;
-    height: 20vh;
+    width:clamp(10rem, 100vw, 12rem);
+    height: clamp(40px, 50vw, 70px);
     font-size: 1.7rem;
     
   }
   .welcome-info {
     flex-direction: column;
-    min-width: 70%;
-    height: 90vh;
+    width: clamp(70%, 60vw, 100%);
+    height:clamp(30%, 50vw, 60%);
     border-radius: 20px;
     padding: 15px;
     color: #a42fc1;
   }
   .avater-info {
     width: 100%;
-    /* background-color: red; */
   }
 }
